@@ -1,55 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
-    <style> 
- #myDIV {
-  --div-width: 100px;
-  position: absolute;
-  background-color: mediumseagreen;
-  color: white;
-  transition: 0.5s transform;
-  top: 0;  
-  width: var(--div-width);
-}
+        <title>Hello World</title>
+        <style>
 
-button {
-  z-index: 1;
-  position: absolute;
-}
-    </style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        body {
+            display: table;
+        }
+
+        .my-block {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        </style>
     </head>
     <body>
-
-    <p>Will you be my Valentine?</p>
-    <p><strong>Note:</strong> If the position property is set to "static", the 
-    right 
-    property has no effect.</p>
-
-    <button onclick="myFunction()">Try it</button>
-        
-<button>Try it</button>
-
-<div id="myDIV">
-  <h1>myDIV</h1>
-</div>
-    <script>
-    function myFunction() {
-        document.getElementById("myDIV").style.right = Math.floor(Math.random() 
-    * 1) 
-    + 100.px  ;
-    }
-
-        const btn = document.querySelector("button");
-const height = document.documentElement.clientHeight;
-const width = document.documentElement.clientWidth;
-const box = document.getElementById("myDIV");
-
-btn.addEventListener("click", () => {
-  let randY = Math.floor((Math.random() * height) + 1);
-  let randX = Math.floor((Math.random() * width) + 1);
-  box.style.transform = `translate(${randX}px, ${randY}px)`;
-});
-    </script>
-
+    <div class="my-block">
+       Will you be my Valentine?<br />
+       
+    </div>
     </body>
 </html>
